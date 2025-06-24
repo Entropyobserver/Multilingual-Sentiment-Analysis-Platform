@@ -55,7 +55,9 @@ jobs:
           name: node-app
 
       - name: Unzip build artifact
-        run: unzip release.zip -d frontend
+        run: |
+          ls -la  
+          unzip release.zip -d frontend
 
       - name: Login to Azure
         uses: azure/login@v2
