@@ -24,7 +24,7 @@ jobs:
       - name: Install and build React frontend
         run: |
           cd frontend
-          npm ci
+          npm install
           npm run build
         env:
           CI: false
