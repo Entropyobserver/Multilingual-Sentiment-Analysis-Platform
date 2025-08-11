@@ -1,0 +1,27 @@
+# Default configuration for Twitter RoBERTa experiments
+model_name: "cardiffnlp/twitter-roberta-base-sentiment-latest"
+num_epochs: 3
+batch_size: 4
+learning_rate: 2e-5
+max_length: 128
+patience: 3
+num_runs: 3
+
+# LoRA configuration
+use_lora: false
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.1
+lora_target_modules: ["query", "value"]
+lora_bias: "none"
+
+# Training configuration
+save_model: false
+save_dir: "twitter_roberta_models"
+keep_punctuation: true
+seed: 42
+enable_hyperparameter_tuning: false
+
+# Data configuration
+samples_per_class: 10000
+test_samples_per_class: 1500
